@@ -1,0 +1,145 @@
+/* ---------- Colors & fonts (change these to restyle everything) ---------- */
+:root {
+  --bg: #f2f4ef;
+  --ink: #16213a;
+  --muted: #5b6478;
+  --accent: #2a6f97;
+  --highlight: #f2c14e;
+  --bs-body-font-family: "DM Sans", system-ui, sans-serif;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--bg);
+}
+
+html { scroll-behavior: smooth; }
+body { font-size: 1.05rem; line-height: 1.7; }
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a { color: var(--accent); }
+.py-6 { padding-top: 6rem; padding-bottom: 6rem; }
+.text-muted-ink { color: var(--muted); }
+
+/* ---------- Navbar ---------- */
+.site-nav {
+  background: rgba(242, 244, 239, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(22, 33, 58, 0.08);
+}
+.site-nav .navbar-brand { color: var(--ink); }
+.site-nav .nav-link { color: var(--ink); font-weight: 500; }
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active { color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero { min-height: 100vh; padding-top: 5rem; }
+.hero-kicker { color: var(--accent); font-weight: 500; margin-bottom: 1rem; }
+.hero-title { font-weight: 800; line-height: 1.05; max-width: 15em; }
+.hero-text { color: var(--muted); max-width: 34em; }
+
+.avatar {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--ink);
+  background: var(--highlight);
+  box-shadow: 14px 14px 0 var(--ink);
+  object-fit: cover;
+}
+
+/* ---------- Buttons ---------- */
+.btn-ink {
+  background: var(--ink);
+  color: #fff;
+  border: 2px solid var(--ink);
+}
+.btn-ink:hover, .btn-ink:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-outline-ink {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+.btn-outline-ink:hover, .btn-outline-ink:focus-visible {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* ---------- Section titles ---------- */
+.section-title {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Skills ---------- */
+.skill { margin-bottom: 1.1rem; }
+.progress { height: 10px; background: #dfe3da; border-radius: 6px; }
+.progress-bar { background: var(--accent); border-radius: 6px; }
+
+/* ---------- Projects ---------- */
+.project {
+  position: relative;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.project-thumb {
+  height: 160px;
+  display: grid;
+  place-items: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  border-bottom: 2px solid var(--ink);
+}
+.thumb-1 { background: var(--accent); }
+.thumb-2 { background: #3d5a45; }
+.thumb-3 { background: var(--ink); }
+.tags { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+
+/* ---------- Form ---------- */
+.form-control {
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+}
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(42, 111, 151, 0.25);
+}
+
+/* ---------- Footer ---------- */
+.footer { background: var(--ink); color: #dfe3ee; }
+.footer a { color: var(--highlight); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project { transition: none; }
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 575px) {
+  .py-6 { padding-top: 4rem; padding-bottom: 4rem; }
+  .avatar { width: 200px; height: 200px; font-size: 3rem; }
+}
